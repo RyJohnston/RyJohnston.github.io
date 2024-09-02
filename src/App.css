@@ -1,0 +1,257 @@
+body {
+    background-color: #fcefd4;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    opacity: .5;
+    visibility: visible;
+  }
+
+  #logo {
+    height: 90px;
+    width: 90px;
+  }
+  
+  .menu {
+    position: fixed;
+    width: 90dvw;
+    left: 5dvw;
+    right: 5dvw;
+    top: 5dvh;
+    z-index: 99;
+    mix-blend-mode: difference;
+
+    a {
+      cursor: none;
+      text-decoration: none;
+      display: block;
+      color: #fcefd4;
+      padding: 14px 16px;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    a:hover {
+      color:#7fb069
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: inline;
+  }
+
+  li {
+    
+    float: right;
+    margin-top: 1rem;
+  }
+
+  html {
+    cursor: none;
+    scroll-behavior: smooth;
+  }
+
+  .cursor__ball {
+    position:absolute;
+    mix-blend-mode: difference;
+    z-index: 100;
+    
+    circle {
+      fill: #fcefd4;
+    }   
+  }
+  
+  .cursor {
+    pointer-events: none;
+  }
+
+  .inside-content {
+    margin-left: 8dvw;
+    margin-right: 8dvw;
+  }
+
+  h1 {
+    font-size: 6em;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-weight: 200;
+  }
+
+  .section-title {
+    font-size: 6rem;
+    color: #3c5a14;
+    padding-top: 2.5rem;
+    position: relative;
+  }
+
+
+
+
+:root {
+  --dark: #0d1b1e;
+  --light: #fcefd4;;
+  --primary: #3c5a14;;
+  --secondary: #7fb069;
+  --accent: #70161e;
+  font-family: 'Roboto';
+  color: var(--dark);
+}
+.dark-color {
+  color: var(--dark);
+}
+.light-color {
+  color: var(--light);
+}
+.primary-color {
+  color: var(--primary);
+}
+.secondary-color {
+  color: var(--secondary);
+}
+.accent-color {
+  color: var(--accent);
+}
+
+#about {
+  scroll-margin-top: 200px;
+}
+
+/* Page Content */
+.content {
+  margin: auto 16dvw auto 16dvw;
+}
+
+.center {
+  position: relative;
+  top: 45%;
+  text-align: center;
+}
+
+/* Horizontal Section Title */
+.hz-section-title {
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+/* Vertical Section Title */
+.vt-section-title {
+  margin: 8rem 0 0 20dvw;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 6rem;
+  position: absolute;
+  font-weight: 600;
+}
+
+/* Career Section */
+#career {
+  color: #fcefd4;
+  position: relative;
+  background-color: var(--dark);
+}
+
+#jobs-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.job-container {
+  display: grid;
+  grid-template-columns: 10rem 50px 400px;
+  margin-bottom: 6rem;
+}
+
+.job-title {
+  padding-top: 4px;
+  font-weight: 600;
+}
+
+.job-circle-seperator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.job-time {
+  text-align: right;
+  padding-top: 4px;
+  font-weight: 100;
+}
+
+.job-description {
+  grid-column-start: 3;
+  font-weight: 300;
+}
+
+/* Contact Section */
+#contact {
+  height: 100dvh;
+}
+
+.hover-text {
+  font-size: 6rem;
+  font-weight: 600;
+  }
+
+.email-prompt {
+  opacity: 0;
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.header-date {
+  font-weight: 100;
+}
+
+.footer {
+  text-align: center;
+  position: relative;
+  top: 60%;
+}
+
+.github-icon {
+  margin-top: 3rem;
+  width: 35px;
+}
+
+.hover-effect {
+  cursor: none;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 3em;
+  background: red;
+  margin: 0;
+  position: absolute;
+}
+
+.fade-in {
+  opacity: 0;
+}

@@ -1,0 +1,41 @@
+#about {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+#about-title-section {
+    display: grid;
+}
+
+.under, .over {
+    grid-area: 1 / 1;
+  }
+
+.scroll-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.scroll-text {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+}
+
+.scroll-text span {
+    display: inline-block;
+    color: white;
+    font-size: 7rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
