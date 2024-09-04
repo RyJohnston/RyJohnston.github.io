@@ -17,7 +17,6 @@ function App() {
   let body = gsap.utils.selector('body');
 
   useEffect(() => {
-
     // Cursor Animation
     window.addEventListener('mousemove', (e) => {
       gsap.to(body('.cursor__ball--big'), { 

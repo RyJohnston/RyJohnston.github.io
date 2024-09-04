@@ -13,11 +13,10 @@ export default function About() {
                 <div className='content over'>
                     <div className='section-title hz-section-title title fade-in' id='about-title'>ABOUT<span className='accent-color'>.</span></div>
                     <div className='inside-content fade-in'>
-                        <p className='about-text'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra malesuada dictum. Fusce vel augue vel nibh tempor vestibulum non et magna. Quisque pulvinar ac nibh ac imperdiet. Donec at urna eu urna porttitor tempor id ac justo. In eu nunc neque. Nullam vehicula dui ut pretium luctus. Nunc convallis eleifend ipsum, at bibendum eros placerat sed. 
-                        </p>
                         <p>
-                        Aliquam ac eros ut sem lacinia aliquet id quis erat. Etiam pulvinar leo blandit nisl maximus, ac sagittis dui laoreet. Praesent pharetra imperdiet nunc, tempor malesuada sapien laoreet id. Nullam viverra neque sem, eu viverra purus lacinia at. Quisque dignissim tincidunt diam et hendrerit. Nulla facilisi.
+                        From an early interest in animation, my passion for creating grew into a love for coding and game development. What started as a desire to bring my own video games to life led me to take my first programming class in high school. I was immediately captivated by the world of software development, which motivated me to pursue a degree in computing.
+                        </p><p>
+                        While studying at university, I gained a solid foundation in computer science and enhanced my skills in design through a variety of classes. Now, as a commercial software developer, I continue to combine my technical expertise with my creative interests. Alongside my professional work, I'm actively developing my own game and exploring graphic design projects, always driven to blend creativity with technology.
                         </p>
                     </div>
                 </div>
