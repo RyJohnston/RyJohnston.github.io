@@ -2,7 +2,7 @@ import GithubIcon from '../assets/github-icon.svg'
 
 export default function Contact() {
     return  (
-        <div id="contact" className='background.gradient'>
+        <div id="contact">
             <div className="center fade-in">
                 <div className="hover-text">
                     <span className='primary-color contact-text hover' onClick={() => {navigator.clipboard.writeText('ry.jcjohnston@gmail.com')}}>CONTACT ME</span>

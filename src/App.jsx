@@ -5,6 +5,7 @@ import Header from './sections/homepage-header/homepageHeader'
 import About from './sections/homepage-about/homepageAbout'
 import Career from './sections/homepageCareer'
 import Contact from './sections/homepageContact'
+import Ethos from './sections/hompageEthos'
 import { useEffect, useRef } from 'react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -17,6 +18,9 @@ function App() {
   let body = gsap.utils.selector('body');
 
   useEffect(() => {
+    // Set mobile screen size
+    const mobile = window.matchMedia('screen and (max-width: 768px)');
+
     // Cursor Animation
     window.addEventListener('mousemove', (e) => {
       gsap.to(body('.cursor__ball--big'), { 
@@ -60,14 +64,18 @@ function App() {
       item.addEventListener('mouseleave', () => tl.reverse());
     });
 
+    console.log(mobile);
 
     // Gradient BG Animation
-    let bg1 = 'linear-gradient(30deg, rgba(252,239,212,1) 0%, rgba(229,245,206,1) 49%, rgba(239,250,232,1) 86%)';
-    let bg2 = 'linear-gradient(247deg, rgba(252,239,212,1) 0%, rgba(229,245,206,1) 49%, rgba(239,250,232,1) 86%)';
-    gsap.timeline({repeat:-1, yoyo:"true", repeatDelay:0})
-      .add(gsap.set("body", { height: '200dvh', width: '100dvw', background: bg1 }))
-      .add(gsap.to("body", {ease: "none", duration: 10, background: bg2}))
-      .play(0);
+    if (!mobile.matches) {
+      
+      let bg1 = 'linear-gradient(30deg, rgba(252,239,212,1) 0%, rgba(229,245,206,1) 49%, rgba(239,250,232,1) 86%)';
+      let bg2 = 'linear-gradient(247deg, rgba(252,239,212,1) 0%, rgba(229,245,206,1) 49%, rgba(239,250,232,1) 86%)';
+      gsap.timeline({repeat:-1, yoyo:"true", repeatDelay:0})
+        .add(gsap.set("body", { height: '200dvh', width: '100dvw', background: bg1 }))
+        .add(gsap.to("body", {ease: "none", duration: 10, background: bg2}))
+        .play(0);
+    }
 
     // Scroll Animations
     const jobs = gsap.utils.toArray('.job-container');
@@ -83,18 +91,19 @@ function App() {
     });
 
     // Contact Me Hover Animation
-    const contact = document.querySelector('.contact-text');
-    const contactAnimation = gsap.timeline({ paused: true }).to('.email-prompt', {
-      opacity: 1,
-      duration: 0.3
-    }).to('.hover-text', {
-      scale: 1.1,
-      rotation: -3,
-      duration: 0.5,
-    });
-    contact.addEventListener('mouseenter', () => contactAnimation.play());
-    contact.addEventListener('mouseleave', () => contactAnimation.reverse());
-
+    if (!mobile.matches) {
+      const contact = document.querySelector('.contact-text');
+      const contactAnimation = gsap.timeline({ paused: true }).to('.email-prompt', {
+        opacity: 1,
+        duration: 0.3
+      }).to('.hover-text', {
+        scale: 1.1,
+        rotation: -3,
+        duration: 0.5,
+      });
+      contact.addEventListener('mouseenter', () => contactAnimation.play());
+      contact.addEventListener('mouseleave', () => contactAnimation.reverse());
+    }
 
     // Contact Me Click
     const contactClick = gsap.timeline({ paused: true }).to('.contact-text', {
@@ -109,18 +118,20 @@ function App() {
     });
     
     // Fade in Titles
-    gsap.utils.toArray('.fade-in').forEach((section, i) => {
-      gsap.to(section, {
-        opacity: 1,
-        duration: 1.4,
-        scrollTrigger: {
-          trigger: section,
-          start: "bottom bottom",
-          end: "+=100",
-          toggleActions: "play none none none"
-        }
+    if (!mobile.matches) {
+      gsap.utils.toArray('.fade-in').forEach((section, i) => {
+        gsap.to(section, {
+          opacity: 1,
+          duration: 1.4,
+          scrollTrigger: {
+            trigger: section,
+            start: "bottom bottom",
+            end: "+=100",
+            toggleActions: "play none none none"
+          }
+        });
       });
-    });
+    }
   });
 
   return (

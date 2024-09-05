@@ -101,8 +101,39 @@ body {
     position: relative;
   }
 
-
-
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #fcefd4 !important;
+  }
+  #logo {
+    height: 60px;
+    width: 60px;
+  }
+  .fade-in {
+    opacity: 1 !important;
+  }
+  .vt-section-title {
+    margin: 1rem !important;
+    writing-mode: horizontal-tb !important;
+    font-size: 4rem !important;
+    position: absolute;
+    font-weight: 600;
+  }
+  .email-prompt {
+    opacity: 1 !important;
+  }
+  .job-time {
+    writing-mode: vertical-rl;
+  }
+  .job-container {
+    display: grid;
+    grid-template-columns: auto auto auto !important;
+    margin-bottom: 6rem;
+  }
+  .contact-text {
+    font-size: 5rem !important;
+  }
+}
 
 :root {
   --dark: #0d1b1e;
